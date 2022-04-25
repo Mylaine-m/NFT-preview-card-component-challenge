@@ -90,108 +90,137 @@ p {
 
 /* SET UP MOBILE FIRST*/
 
-    body {
-        background-color: hsl(var(--clr-db-main));
-        font-family: var(--ff-outfit);
-        font-size: 18px;
-    }
-    
-    .box {
-        background-color: hsl(var(--clr-db-card));
-        color: hsl(var(--clr-white));
-        padding: 1.3em 1.4em;
-        margin: 3.1em 1.4em;
-        max-width: 80rem;
-        border-radius: 15px;
-    }
-    
-    .equilibrium-img {
-        width: 100%;
-        border-radius: 10px;
-    
-    }
-    
-    h1 {
-        font-size: 20px;
-        font-weight: 600;
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-    
-    p {
-        font-size: 15px;
-        font-weight: 300;
-        color: hsl(var(--clr-soft-blue));
-        line-height: 1.5;
-        padding-bottom: 1em;
-        letter-spacing: .5px;
-    }
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .small-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .icon {
-        padding-right: 7px;
-    }
-    .item {
-        padding: 0;
-        align-self: center;
-    }
-    
-    .eth-price {
-        color: hsl(var(--clr-cyan));
-        font-weight: 400;
-        font-size: 16px;
-    }
-    
-    .time-left {
-        color: hsl(var(--clr-soft-blue));
-        font-weight: 300;
-        font-size: 16px;
-    }
-    
-    .profile-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 15px;
-        padding-top: 10px;
-    }
-    
-    .profile-picture {
-        border: 1px solid;
-        border-radius: 50%;
-        border-color: hsl(var(--clr-white));
-        width: 12%;
-        margin-left: 2px;
-    }
-    
-    span,
-    a {
-        color: hsl(var(--clr-white));
-    }
-    
-    .credit {
-        font-size: 12px;
-        font-weight: 300;
-        text-align: center;
-    }
-    
-    a {
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .effect:hover {
-        color: hsl(var(--clr-cyan));
-        cursor: pointer;
-    }
+body {
+	background-color: hsl(var(--clr-db-main));
+	font-family: var(--ff-outfit);
+	font-size: 18px;
+}
+
+.box {
+	background-color: hsl(var(--clr-db-card));
+	color: hsl(var(--clr-white));
+	padding: 1.3em 1.4em;
+	margin: 3.1em 1.4em;
+	max-width: 80rem;
+	border-radius: 15px;
+}
+
+.img-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.equilibrium-img {
+	width: 100%;
+	border-radius: 10px;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+
+.view {
+	position: absolute;
+	inset: 0;
+	background: hsl(var(--clr-cyan)/.4);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.equilibrium-img,
+.view {
+	transition: 200ms ease-in-out;
+}
+
+.img-container > .view.fade {
+	opacity: 0;
+}
+.img-container:hover > .view.fade {
+	opacity: 1;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 600;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 300;
+	color: hsl(var(--clr-soft-blue));
+	line-height: 1.5;
+	padding-bottom: 1em;
+	letter-spacing: .5px;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.small-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.icon {
+	padding-right: 7px;
+}
+.item {
+	padding: 0;
+	align-self: center;
+}
+
+.eth-price {
+	color: hsl(var(--clr-cyan));
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.time-left {
+	color: hsl(var(--clr-soft-blue));
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.profile-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 15px;
+	padding-top: 10px;
+}
+
+.profile-picture {
+	border: 1px solid;
+	border-radius: 50%;
+	border-color: hsl(var(--clr-white));
+	width: 12%;
+	margin-left: 2px;
+}
+
+span,
+a {
+	color: hsl(var(--clr-white));
+}
+
+.credit {
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.effect:hover {
+	color: hsl(var(--clr-cyan));
+	cursor: pointer;
+}
