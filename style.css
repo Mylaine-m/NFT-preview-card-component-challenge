@@ -1,21 +1,21 @@
 /* CUSTOM PROPERTIES */
 
 :root {
-/* COLORS */
-    --clr-soft-blue: 215 51% 70%;
-    --clr-cyan: 178 100% 50%;
-    --clr-white: 0 0% 100%;
-    --clr-db-main: 217 54% 11%;
-    --clr-db-card: 216 50% 16%;
-    --clr-db-line: 215 32% 27%;
+	/* COLORS */
+	--clr-soft-blue: 215 51% 70%;
+	--clr-cyan: 178 100% 50%;
+	--clr-white: 0 0% 100%;
+	--clr-db-main: 217 54% 11%;
+	--clr-db-card: 216 50% 16%;
+	--clr-db-line: 215 32% 27%;
 
-/* FONT-SIZES */
-    /* --fs-300: rem;
+	/* FONT-SIZES */
+	/* --fs-300: rem;
     --fs-400: rem;
     --fs-600: rem; */
 
-/* FONT-FAMILIES */
-    --ff-outfit: "Outfit", sans-serif;
+	/* FONT-FAMILIES */
+	--ff-outfit: "Outfit", sans-serif;
 }
 
 /* RESET */
@@ -67,88 +67,131 @@ p {
 
 /* COLORS */
 .text-blue {
-    color: hsl(var(--clr-soft-blue));
+	color: hsl(var(--clr-soft-blue));
 }
 .text-cyan {
-    color: hsl(var(--clr-cyan));
+	color: hsl(var(--clr-cyan));
 }
 .text-white {
-    color: hsl(var(--clr-white));
+	color: hsl(var(--clr-white));
 }
 .bg-db-main {
-    background-color: hsl(var(--clr-db-main));
+	background-color: hsl(var(--clr-db-main));
 }
 .bg-db-card {
-    background-color: hsl(var(--clr-db-card));
+	background-color: hsl(var(--clr-db-card));
 }
-.bg-db-line{
-    background-color: hsl(var(--clr-db-line));
+.bg-db-line {
+	background-color: hsl(var(--clr-db-line));
 }
 .bg-db-main {
-    background-color: hsl(var(--clr-db-main));
+	background-color: hsl(var(--clr-db-main));
 }
 
 /* SET UP MOBILE FIRST*/
 
-body {
-    background-color: hsl(var(--clr-db-main));
-    font-family: var(--ff-outfit);
-    font-size: 18px;
-}
-
-.container {
-    background-color: hsl(var(--clr-db-card));
-    color: hsl(var(--clr-white));
-    padding: 1.5em;
-    margin: 3.5em 1.5em 3.5em 1.5em;
-	max-width: 80rem;
-    border-radius: 15px;
-}
-
-.equilibrium-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-h1 {
-    font-size: 20px;
-    font-weight: 600;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-p {
-    font-size: 15px;
-    font-weight: 300;
-    color: hsl(var(--clr-soft-blue));
-    line-height: 1.5;
-    padding-bottom: 1em;
-    letter-spacing: .5px;
-
-}
-
-.eth-price {
-    color: hsl(var(--clr-cyan));
-    font-weight: 400;
-    padding-right: 4em;
-    font-size: 16px;
-}
-
-.time-left {
-    color: hsl(var(--clr-soft-blue));
-    font-weight: 300;
-    font-size: 16px;
-}
-.icon {
+    body {
+        background-color: hsl(var(--clr-db-main));
+        font-family: var(--ff-outfit);
+        font-size: 18px;
+    }
     
-}
-.profile-picture {
-    border: 1px solid;
-    border-radius: 50%;
-    border-color: hsl(var(--clr-white));
-    width: 12%;
-}
-
-span {
-    color: hsl(var(--clr-white));
-}
+    .box {
+        background-color: hsl(var(--clr-db-card));
+        color: hsl(var(--clr-white));
+        padding: 1.3em 1.4em;
+        margin: 3.1em 1.4em;
+        max-width: 80rem;
+        border-radius: 15px;
+    }
+    
+    .equilibrium-img {
+        width: 100%;
+        border-radius: 10px;
+    
+    }
+    
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        color: hsl(var(--clr-soft-blue));
+        line-height: 1.5;
+        padding-bottom: 1em;
+        letter-spacing: .5px;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .small-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon {
+        padding-right: 7px;
+    }
+    .item {
+        padding: 0;
+        align-self: center;
+    }
+    
+    .eth-price {
+        color: hsl(var(--clr-cyan));
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    .time-left {
+        color: hsl(var(--clr-soft-blue));
+        font-weight: 300;
+        font-size: 16px;
+    }
+    
+    .profile-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        padding-top: 10px;
+    }
+    
+    .profile-picture {
+        border: 1px solid;
+        border-radius: 50%;
+        border-color: hsl(var(--clr-white));
+        width: 12%;
+        margin-left: 2px;
+    }
+    
+    span,
+    a {
+        color: hsl(var(--clr-white));
+    }
+    
+    .credit {
+        font-size: 12px;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .effect:hover {
+        color: hsl(var(--clr-cyan));
+        cursor: pointer;
+    }
