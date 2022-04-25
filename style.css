@@ -96,14 +96,19 @@ body {
 	font-size: 18px;
 }
 
-.box {
+ .box {
 	background-color: hsl(var(--clr-db-card));
 	color: hsl(var(--clr-white));
 	padding: 1.3em 1.4em;
 	margin: 3.1em 1.4em;
-	max-width: 80rem;
 	border-radius: 15px;
-}
+    min-width: 24em;
+    max-width: 24em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1.4em 3em #0B1726, -1.4em 3em #0B1726;
+    
+ }
 
 .img-container {
 	position: relative;
@@ -223,4 +228,4 @@ a {
 .effect:hover {
 	color: hsl(var(--clr-cyan));
 	cursor: pointer;
-}
+} 
